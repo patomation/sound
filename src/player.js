@@ -35,7 +35,7 @@ const fadeAll = (key, time) => {
 }
 
 export default {
-  play: (key, { voiceOverlap, start, end }) => {
+  play: (key, { voiceOverlap = false, start = 0, end }) => {
     if (sounds[key]) {
       // Crete new source
       const source = createSouce(sounds[key].buffer)
